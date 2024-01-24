@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해커네컷</title>
+  <link href="../static/CSS/web.css" rel="stylesheet">
+  <link href="../static/CSS/final_step3.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+</head>
+
+<body>
+  <div class="page_final_step3">
+    <div class="title_conatiner">
+      <img class="title_img" src="../static/img/final_title_step3.svg">
+    </div>
+      <a class="btn_container" href="../static/img/final_imgs/final_img_{{card_id}}.png" download><img class="btn_download"
+          onclick="this.src='../static/img/btn_download_onclick.png'" src="../static/img/btn_download.png"></a>
+  </div>
+</body>
+<script>
+  fetch(`/send_img_to_slack?card_id={{card_id}}`)
+</script>
+
+</html>

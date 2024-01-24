@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해커네컷</title>
+    <link href="../static/CSS/web.css" rel="stylesheet">
+    <link href="../static/CSS/page_studio.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+    <link href="https://webfontworld.github.io/naver/NanumSquareRound.css" rel="stylesheet">
+    <script src="../static/js/studio.js"></script>
+</head>
+
+<body>
+    <style>
+    </style>
+    </head>
+
+    <body>
+        <form action="/gogo_snap" method="post" style="display: none;">
+            <input class="gogo_url" type="text" name="gogo_url">
+            <input class="snap_cnt" type="number" name="snap_cnt" value={{snap_cnt}}>
+            <input name="card_id" value={{card_id}}>
+        </form>
+        <div class="page_studio">
+
+            <div class="title">
+                <img src="../static/img/title.svg">
+            </div>
+            <div class="video_and_cnt">
+                <div style="background-color: gray;" id="video_container">
+                    <video  muted playsinline autoplay style="object-fit:cover;"  width="100%", height="100%" id="video_element"></video>
+                </div>
+                <div class="count_down">
+                    <input class="snap_cnt" value={{snap_cnt}} style="display: none">
+                    <img class="cnt_img" data-cnt="5" src="../static/img/cnt_5.png">
+                </div>
+                <div class="show_cnt">
+                    {{snap_cnt+1}}/8
+                </div>
+            </div>
+
+
+            <div class="btn_container">
+                <img class="btn_now_snap" onclick="snap_photo()" onclick="this.src='../static/img/btn_nowsnap_onclick.png'"src="../static/img/btn_now_snap.png">
+            </div>
+            
+        </div>
+    </body>
+
+</html>

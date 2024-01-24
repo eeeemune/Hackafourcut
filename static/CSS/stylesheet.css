@@ -1,0 +1,9 @@
+.page_change_frame .left .frame_name_pack .frame_container {
+    background-color: white;
+    border: 1px solid gray;
+    width: 24rem;
+  }
+  .page_change_frame .left .frame_name_pack .frame_container img {
+    width: 100%;
+    height: auto;
+  }/*# sourceMappingURL=stylesheet.css.map */

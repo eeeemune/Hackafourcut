@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해커네컷</title>
+    <link href="../static/CSS/web.css" rel="stylesheet">
+    <link href="../static/CSS/final_step1.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="../static/js/final_step1.js"></script>
+</head>
+
+<body>
+    <form action="/final_step2" method="post">
+      <input class="card_id" name="card_id" data-card_id="{{card_id}}" value="{{card_id}}" style="display: none;">
+      <input class="selected_img_idxes" name="selected_img_idxes" value="[]"  style="display: none;">
+    </form>
+
+    <div class="page_final_step1">
+      <div class="comp_title">
+        <img src="../static/img/final_title_step1.svg">
+      </div>
+      <div class="comp_imgs">
+        {% set cnt = 8 %}
+        {% for i in range(cnt) %}
+          <div onclick="clicked_img(this)" data-idx={{i+1}} class="sect_img">
+            <img class="hide check" src="../static/img/icon_check_true.svg">
+            <img src="../static/img/base_imgs/{{card_id}}_{{i+1}}.png">
+          </div>
+        {% endfor %}
+      <div class="btn_container">
+        <img class="btn_step1_next" onclick="clicked_btn_step1_next(this)" src="../static/img/btn_select.png">
+      </div>
+    </div>
+</body>
+
+</html>

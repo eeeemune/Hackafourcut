@@ -1,0 +1,90 @@
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.page_final_step1{
+    width: 100vw;
+    max-width: 445px;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 16px;
+}
+    .page_final_step1 .comp_title{
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+        .page_final_step1 .comp_title img{
+            margin: auto;
+            width: 240px;
+        }
+        .page_final_step1 .comp_imgs{
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-gap: 8px;
+            justify-content: center;
+            width: 94vw;
+            max-width: 380px;
+            margin: auto;
+        }
+            .page_final_step1 .comp_imgs .sect_img{
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                /* width: 46vw;
+                height: 31vw; */
+                /* max-width: 206px;
+                max-height: 138px; */
+                /* width: 50%; */
+                overflow: hidden;
+                object-fit: cover;
+            }
+                .page_final_step1 .comp_imgs .sect_img.selected{
+
+                    box-shadow: 0px 0px 0px 6px #1563FC inset;
+                }
+                    .page_final_step1 .comp_imgs .sect_img .check{
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        right: 15px;
+                        top: 15px;
+                    }
+                    .page_final_step1 .comp_imgs .sect_img.selected .check{
+                        display: block;
+
+                    }
+                .page_final_step1 .comp_imgs .sect_img img{
+                    width: 100%;
+                    z-index: -1;
+                    position: relative;
+                }
+                .page_final_step1 .comp_imgs .sect_img .check{
+                    z-index: 199;
+                }
+                .page_final_step1 .comp_imgs .sect_img:hover{
+                    cursor: pointer;
+                }
+            .comp_imgs .selected{
+                box-shadow: 0px 0px 0px 5px #1563FC inset;
+                
+            }
+            .page_final_step1 .btn_container{
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                width: 94vw;
+                max-width: 380px;
+            }
+                .page_final_step1 .btn_container .btn_step1_next{
+                    width: 300px;
+
+                }
+                    .page_final_step1 .btn_container .btn_step1_next:hover{
+                        cursor: pointer;
+                    }

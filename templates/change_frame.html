@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해커네컷</title>
+    <link href="../static/CSS/stylesheet.css" rel="stylesheet">
+    <link href="../static/CSS/web.css" rel="stylesheet">
+    <link href="../static/CSS/change_frame.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page_change_frame">
+        <div class="left">
+            <div class="frame_name_pack">
+                <div class="frame_container">
+                    <img src="../static/img/frames/frame_foreground.png"/>
+                </div>
+                <p>frame_ottugi.png</p>
+            </div>
+        </div>
+        <div class="right">
+            <form method="POST" action="/change_frame" enctype="multipart/form-data">
+                <input type="file" name="image">
+                <input type="submit" value="Upload Image">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

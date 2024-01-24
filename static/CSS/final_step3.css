@@ -1,0 +1,38 @@
+body{
+    width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.page_final_step3{
+    width: 100vw;
+    max-width: 445px;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 16px;
+}
+    .page_final_step3 .title_conatiner{
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+        .page_final_step3 .title_conatiner img{
+            margin: auto;
+            width: 248px;
+        }
+    .page_final_step3 .btn_container{
+
+
+    }
+        .page_final_step3 .btn_container{
+            display: flex;
+            justify-content: center;
+        }
+            .page_final_step3 .btn_container .btn_download:hover{
+                cursor: pointer;
+            }
+            .page_final_step3 .btn_container img{
+                width: 300px;
+                margin: auto;
+                margin-top: 200px;
+            }

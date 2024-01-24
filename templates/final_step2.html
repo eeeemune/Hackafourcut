@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해커네컷</title>
+  <link href="../static/CSS/web.css" rel="stylesheet">
+  <link href="../static/CSS/final_step2.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="../static/js/final_step2.js"></script>
+</head>
+
+<body>
+  <form class="hide" action="/final_step3" method="post">
+    <input class="card_id" name="card_id" data-card_id="{{card_id}}" value="{{card_id}}" style="display: none;">
+    <input class="selected_img_idxes" name="selected_img_idxes" value="{{selected_img_idxes}}" style="display: none;">
+    <input class="frame_name" name="frame_name" data-gogo="" value="blue">
+  </form>
+
+  <div class="page_final_step2">
+    <div class="comp_title">
+      <img src="../static/img/final_title_step2.svg">
+    </div>
+    <div class="comp_frame">
+      <div class="sect_frame">
+        <div class="pics_frame_pack">
+          
+          <div class="frame_container">
+            <img class="frame" src="../static/img/frames/blue.png" >
+            <img class="frame" src="../static/img/frames/blue.png" >
+          </div>
+          <div class="pics">
+            <img class="11" style="margin-top: 45px; margin-left: 7px;"  src="../static/img/base_imgs/{{card_id}}_{{selected_img_idxes[0]}}.png">
+            <img class="12" style="margin-top: 144px; margin-left: 7px;" src="../static/img/base_imgs/{{card_id}}_{{selected_img_idxes[1]}}.png">
+            <img class="13" style="margin-top: 241px; margin-left: 7px;" src="../static/img/base_imgs/{{card_id}}_{{selected_img_idxes[2]}}.png">
+            <img class="14" style="margin-top: 338px; margin-left: 7px;" src="../static/img/base_imgs/{{card_id}}_{{selected_img_idxes[3]}}.png">
+            <img class="21" style="margin-top: 47px; margin-left:  157px;" src="../static/img/base_imgs/{{card_id}}_{{selected_img_idxes[0]}}.png">
+            <img class="22" style="margin-top: 144px; margin-left: 157px;" src="../static/img/base_imgs/{{card_id}}_{{selected_img_idxes[1]}}.png">
+            <img class="23" style="margin-top: 241px; margin-left: 157px;" src="../static/img/base_imgs/{{card_id}}_{{selected_img_idxes[2]}}.png">
+            <img class="24" style="margin-top: 338px; margin-left: 157px;" src="../static/img/base_imgs/{{card_id}}_{{selected_img_idxes[3]}}.png">
+          </div>
+
+        </div>
+
+      </div>
+        <div class="comp_frame_list">
+          {% set color_options = [ {'name':'blue', 'color':'#ECF3FE'},{'name':'white', 'color':'#FFFFFF'}, {'name':'pink', 'color':'#FFE9ED'}, {'name':'yellow', 'color':'#FDFF86'}, {'name':'black', 'color':'#222B3A'}] %}
+          {% for option in color_options %}
+          <div onclick="clicked_frame_option(this)" class=" {% if option['name']=='blue' %} selected {% endif %} frame_option" name="{{option['name']}}" data-frame_name="{{option['name']}}" style="background-color: {{option['color']}};"></div>
+          {% endfor %}
+        </div>
+      <div class="btn_container">
+        <img class="btn_step2_next" onclick="clicked_btn_step2_next(this)" src="../static/img/btn_select.png">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

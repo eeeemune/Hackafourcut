@@ -1,0 +1,90 @@
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.page_final_step2{
+    width: 100vw;
+    max-width: 445px;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 16px;
+}
+    .page_final_step2 .comp_title{
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+        .page_final_step2 .comp_title img{
+            margin: auto;
+            width: 240px;
+        }
+    .page_final_step2 .sect_frame{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+        .page_final_step2 .sect_frame .pics_frame_pack{
+            position: relative;
+            width: 300px;
+            height: 452px;
+        }
+        .frame_container{
+            position: absolute;
+            width: 100%;
+            display: flex;
+
+            border-radius: 5px;
+            border: 1px solid #ebebeb;
+        }
+            .page_final_step2 .sect_frame .pics_frame_pack .frame{
+
+                width: 50%;
+                margin: auto;
+
+                z-index: 1;
+            }
+            .page_final_step2 .pics_frame_pack .pics{
+                position: absolute;
+                background-color: #485F6E;
+            }
+            .page_final_step2 .sect_frame .pics_frame_pack .pics img{
+                position: absolute;
+                height: 94px;
+                width: 138px;
+            }
+    .page_final_step2 .btn_container{
+        display: flex;
+        justify-content: center;
+
+    }
+        .page_final_step2 .btn_container .btn_step2_next{
+            width: 300px;
+            margin: 50px auto;
+        }
+            .page_final_step2 .btn_container .btn_step2_next:hover{
+                cursor: pointer;
+            }
+
+
+
+    .page_final_step2 .comp_frame_list{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+        .page_final_step2 .comp_frame_list .frame_option{
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #CFCFCF;
+        }
+            .page_final_step2 .comp_frame_list .frame_option.selected{
+                box-shadow: 0px 0px 0px 2px #1563FC inset;
+            }
+            .page_final_step2 .comp_frame_list .frame_option:hover {
+                cursor: pointer;
+            }
